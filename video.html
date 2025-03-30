@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video - ANPR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:  rgba(179, 0, 152, 0.32);
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color:  rgba(179, 48, 0, 0.47);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color:rgba(149, 179, 0, 0.34);
+        }
+
+        h1 {
+            color: black;
+            background-color:  rgba(39, 179, 0, 0.32);
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>ANPR</h1>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/result">Result</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/video">Video</a>
+    </div>
+
+    <!-- Video Player -->
+    <div class="video-container">
+        <h2>Watch the Video</h2>
+        <video controls autoplay>
+            <source src="{{ url_for('static', filename='test.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>

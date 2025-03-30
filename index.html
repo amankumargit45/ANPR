@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>License Plate Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 167, 179, 0.77);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: black;
+            background-color:beige;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color:rgba(179, 0, 152, 0.59) ;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color:rgba(179, 0, 140, 0.86);
+        }
+
+        /* Upload section styling */
+        .upload-container {
+            background-color: rgba(179, 116, 0, 0.4);
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            flex-grow: 1;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: grey;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color:rgba(167, 179, 0, 0.72);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(152, 179, 0, 0.39);
+            color: white;
+            text-align: center;
+            padding: 8px 0;      /* Reduced thickness */
+            width: 100%;
+            margin-top: auto;     /* Push footer to the bottom */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ANPR</h1>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/result">Result</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/video">Video</a>
+    </div>
+
+    <!-- Upload Form -->
+    <div class="upload-container">
+        <h2>Upload a Video to Detect License Plates</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="video">Choose video file:</label><br>
+            <input type="file" id="video" name="file" required><br>
+            <button type="submit">Upload and Process</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: rgba(179, 48, 0, 0.54); color: white; text-align: left; padding: 5px 0; position: fixed; bottom: 0; width: 100%; font-size: 14px;">
+        &copy; 2025 ANPR System. All rights reserved.
+    </footer>
+    
+</body>
+
+</html>

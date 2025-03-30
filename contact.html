@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - ANPR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(167, 179, 0, 0.72);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: black;
+            background-color:  rgba(0, 155, 179, 0.45);
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: rgba(179, 0, 152, 0.59);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color:rgba(179, 0, 140, 0.86);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-container h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ANPR</h1>
+
+    <!-- Navigation Bar just below header -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/result">Result</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/video">Video</a>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="/submit_contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
